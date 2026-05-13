@@ -1,0 +1,108 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#f5f5e9;
+}
+
+#container{
+    width:1060px;
+    margin:auto;
+    border:1px solid blue;
+    background-color:#f5f5e9;
+}
+
+/* header */
+#header{
+    background-color:#ff9933;
+    padding:15px;
+    border-bottom:2px solid blue;
+}
+
+#header h1{
+    color:white;
+    text-shadow:2px 2px 5px gray;
+    margin:0;
+    font-size:50px;
+}
+
+/* menu */
+#menu{
+    width:210px;
+    float:left;
+    margin:10px;
+    border:1px solid blue;
+    background-color:white;
+}
+
+#menu h3{
+    background-color:blue;
+    color:white;
+    text-align:center;
+    margin:0;
+    padding:5px;
+    letter-spacing:5px;
+}
+
+#menu ul{
+    list-style-type:none;
+    padding:10px;
+    margin:0;
+}
+
+#menu ul li{
+    margin-bottom:10px;
+}
+
+#menu ul li a{
+    text-decoration:none;
+    color:black;
+}
+
+#menu ul li a:hover{
+    color:blue;
+}
+
+/* content */
+#content{
+    margin-left:240px;
+    padding:10px;
+}
+
+#content h1{
+    color:blue;
+    letter-spacing:10px;
+}
+
+/* table */
+table{
+    border-collapse:collapse;
+    width:520px;
+}
+
+table, td, th{
+    border:2px solid black;
+}
+
+th{
+    background-color:#ff9933;
+    color:white;
+    padding:8px;
+}
+
+td{
+    padding:10px;
+    background-color:white;
+}
+
+/* footer */
+#footer{
+    clear:both;
+    border-top:2px solid blue;
+    padding:10px;
+    text-align:center;
+    color:black;
+}
+
+#footer span{
+    color:blue;
+    font-weight:bold;
+}
