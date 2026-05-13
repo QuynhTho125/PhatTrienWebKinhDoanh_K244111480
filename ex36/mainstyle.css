@@ -1,0 +1,45 @@
+body{
+    font-size:22px;
+}
+
+.menu{
+    width:220px;
+    float:left;
+    margin:30px;
+}
+
+h3{
+    height:55px;
+    width:220px;
+    background:url("images/h3.png") no-repeat left bottom;
+    background-size:220px 55px;
+    margin:0;
+    padding:0;
+}
+
+ul{
+    width:165px;
+    min-height:150px;
+    margin:0;
+    padding:20px 10px 30px 55px;
+    background:url("images/ul.png") no-repeat left bottom;
+    background-size:220px 220px;
+    list-style-image:url("images/li.png");
+}
+
+a:link{
+    color:#0000FF;
+}
+
+a:visited{
+    color:#0000FF;
+}
+
+a:hover{
+    color:hotpink;
+    padding-left:10px;
+}
+
+a:active{
+    color:blue;
+}
