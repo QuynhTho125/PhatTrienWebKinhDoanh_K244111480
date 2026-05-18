@@ -4,62 +4,13 @@
     <meta charset="utf-8">
     <title>Table with Style-trigger</title>
 
-    <style type="text/css">
-        table{
-            width:90%;
-            margin:auto;
-            border-collapse:collapse;
-            font-size:24px;
-        }
-
-        table, th, td{
-            border:1px solid black;
-        }
-
-        th, td{
-            padding:5px 12px;
-        }
-
-        thead, tfoot{
-            background-color:#2f78b7;
-            color:white;
-        }
-
-        thead th{
-            text-align:center;
-        }
-
-        tbody tr:nth-child(2n+1){
-            background-color:whitesmoke;
-        }
-
-        tbody tr:nth-child(2n){
-            background-color:#fff2cc;
-        }
-
-        tbody tr:hover{
-            background-color:yellow;
-            cursor:pointer;
-        }
-
-        tfoot td{
-            font-size:24px;
-        }
-
-        .number{
-            text-align:center;
-            width:50px;
-        }
-
-        .id{
-            width:200px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
 </head>
 
 <body>
 
 <table>
+
     <thead>
         <tr>
             <th class="number">#</th>
@@ -69,6 +20,7 @@
     </thead>
 
     <tbody>
+
         <tr>
             <td class="number">1</td>
             <td>123456</td>
@@ -98,13 +50,17 @@
             <td>574878</td>
             <td>Nikola Tesla</td>
         </tr>
+
     </tbody>
 
     <tfoot>
         <tr>
-            <td colspan="3">Designed by John</td>
+            <td colspan="3">
+                Designed by John
+            </td>
         </tr>
     </tfoot>
+
 </table>
 
 </body>

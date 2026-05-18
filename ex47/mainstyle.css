@@ -1,0 +1,49 @@
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    font-size:24px;
+}
+
+table, th, td{
+    border:1px solid black;
+}
+
+th, td{
+    padding:5px 12px;
+}
+
+thead, tfoot{
+    background-color:#2f78b7;
+    color:white;
+}
+
+thead th{
+    text-align:center;
+}
+
+tbody tr:nth-child(odd){
+    background-color:whitesmoke;
+}
+
+tbody tr:nth-child(even){
+    background-color:pink;
+}
+
+tbody tr:hover{
+    background-color:yellow;
+    cursor:pointer;
+}
+
+tfoot td{
+    font-size:24px;
+}
+
+.number{
+    text-align:center;
+    width:50px;
+}
+
+.id{
+    width:200px;
+}
