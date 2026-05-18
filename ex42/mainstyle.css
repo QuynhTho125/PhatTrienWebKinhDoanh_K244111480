@@ -1,0 +1,66 @@
+BODY{
+    color:green;
+    background:white url("images/Draft.jpg") no-repeat fixed center center;
+}
+
+#container{
+    width:700px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+H1, H2, H3, H4, H5, H6{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+ADDRESS{
+    font-size:0.9em;
+    font-style:italic;
+    text-align:left;
+    margin-top:20px;
+}
+
+UL{
+    list-style:circle url("images/Apple.jpg") outside;
+}
+
+UL B{
+    color:rgb(155,0,0);
+}
+
+A{
+    font-size:0.9em;
+    color:green;
+}
+
+A:hover{
+    color:red;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+.Special{
+    color:rgb(153,102,6);
+    font-weight:bold;
+}
+
+DIV.Article{
+    padding:0.5em;
+    border-style:solid;
+    border-width:2px;
+    border-color:green;
+    background-color:rgb(252,221,163);
+    width:250px;
+}
+
+#layout{
+    width:100%;
+    border-spacing:20px 5px;
+}
+
+BLOCKQUOTE{
+    background-color:silver;
+    padding:8px;
+    margin:10px 0;
+}
