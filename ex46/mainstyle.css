@@ -1,0 +1,177 @@
+/* CSS Stylesheet for Exercise 46 - Mount Rainier News */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 0;
+}
+
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #ffb76f; 
+    border: 1px solid #777777;
+    padding: 12px;
+}
+
+
+.header {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-height: 85px;
+}
+
+.header-title {
+    display: block;
+    font-size: 22pt;
+    font-weight: bold;
+    color: #000000;
+    margin-top: -5px;
+}
+
+
+.weather-box {
+    background-color: #fff6ca;
+    border: 1px solid #b59543;
+    text-align: center;
+    padding: 6px;
+    margin-bottom: 15px;
+}
+
+.weather-link {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #0000ee;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.weather-detail {
+    font-size: 10pt;
+    color: #000000;
+}
+
+
+.main-layout {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-area {
+    width: 76%;
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+
+.sidebar {
+    width: 24%;
+    background-color: #52ffb8; 
+    border-left: 1px solid #41ca92;
+    vertical-align: top;
+    padding: 12px 10px;
+}
+
+
+.section-title {
+    font-size: 15pt;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+.text-magenta {
+    color: #c000c0; 
+}
+
+.text-purple {
+    color: #800080; 
+}
+
+.paragraph {
+    font-size: 10.5pt;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+
+.sub-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.image-card {
+    background-color: #ffffff;
+    border: 1px solid #777777;
+    padding: 3px;
+    text-align: center;
+}
+
+.content-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    font-size: 8pt;
+    color: #000000;
+    margin-top: 4px;
+    font-family: Arial, sans-serif;
+}
+
+/* Định dạng viền đen cho ảnh bản đồ núi MRIM */
+.mrim-img {
+    width: 100%;
+    border: 2px solid #000000;
+    display: block;
+}
+
+
+.sidebar-header {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ba2582;
+    margin-bottom: 8px;
+}
+
+.sidebar-sub {
+    font-size: 10pt;
+    font-style: italic;
+    font-weight: bold;
+    color: #2e8b57;
+    margin-bottom: 6px;
+    display: block;
+    text-decoration: none;
+}
+
+.link-group {
+    margin-bottom: 15px;
+}
+
+.link-group a {
+    display: block;
+    font-size: 9.5pt;
+    color: #0000ee;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.link-group a:hover {
+    color: #ff0000;
+}
