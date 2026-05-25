@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ex49</title>
+
+    <style>
+        body{
+            font-family:"Times New Roman",serif;
+        }
+
+        .box{
+            width:760px;
+            margin:30px auto;
+            background:#ccffff;
+            border:3px solid blue;
+            padding:25px 15px 60px;
+        }
+
+        h1{
+            color:red;
+            font-size:32px;
+        }
+
+        hr{
+            border-top:2px solid gray;
+        }
+
+        form{
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .row{
+            margin:25px 0;
+        }
+
+        table{
+            font-size:22px;
+            font-weight:normal;
+        }
+
+        td{
+            width:230px;
+            padding:3px 0;
+        }
+
+        input{
+            font-size:18px;
+        }
+
+        .date{
+            width:190px;
+            height:28px;
+        }
+
+        .keyword{
+            width:675px;
+            height:28px;
+        }
+
+        .btn img{
+            width:80px;
+            margin-right:25px;
+            cursor:pointer;
+            border:0;
+        }
+    </style>
+
+    <script src="db.js"></script>
+
+    <script>
+        function searchData(){
+            var form = document.classifiedForm;
+            var section = "";
+            var keyword = form.keyword.value.toLowerCase();
+            var fromDate = form.fromDate.value;
+            var toDate = form.toDate.value;
+            var publications = [];
+            var result = "";
+
+            for(var i = 0; i < form.section.length; i++){
+                if(form.section[i].checked){
+                    section = form.section[i].value;
+                }
+            }
+
+            if(section == ""){
+                alert("Please choose one section.");
+                return;
+            }
+
+            for(var i = 0; i < form.publication.length; i++){
+                if(form.publication[i].checked){
+                    publications.push(form.publication[i].value);
+                }
+            }
+
+            for(var i = 0; i < fakeDB.length; i++){
+                var item = fakeDB[i];
+                var text = (item.title + " " + item.description).toLowerCase();
+
+                var okSection = section == "All" || item.section == section;
+                var okPublication = publications.length == 0 || publications.indexOf(item.publication) != -1;
+                var okKeyword = keyword == "" || text.indexOf(keyword) != -1;
+                var okFromDate = fromDate == "" || item.date >= fromDate;
+                var okToDate = toDate == "" || item.date <= toDate;
+
+                if(okSection && okPublication && okKeyword && okFromDate && okToDate){
+                    result += item.title + "\n";
+                    result += item.section + " - " + item.publication + " - " + item.date + "\n";
+                    result += item.description + "\n\n";
+                }
+            }
+
+            if(result == ""){
+                result = "No result found.";
+            }
+
+            alert(result);
+        }
+
+        function cancelData(){
+            var form = document.classifiedForm;
+            var items = form.querySelectorAll("input");
+
+            for(var i = 0; i < items.length; i++){
+                if(items[i].type == "radio" || items[i].type == "checkbox"){
+                    items[i].checked = false;
+                }else{
+                    items[i].value = "";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Online Classifieds Search Form</h1>
+        <hr>
+
+        <form name="classifiedForm">
+            <div class="row">
+                1) Search for a classified in the following sections:<br><br>
+
+                <table>
+                    <tr>
+                        <td><input type="radio" name="section" value="Employment"> Employment</td>
+                        <td><input type="radio" name="section" value="Personal"> Personal</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="radio" name="section" value="For Sale" checked> For Sale</td>
+                        <td><input type="radio" name="section" value="Miscellaneous"> Miscellaneous</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="radio" name="section" value="Housing"> Housing</td>
+                        <td><input type="radio" name="section" value="All"> All of the above</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                2) Search the following publications:<br><br>
+
+                <table>
+                    <tr>
+                        <td><input type="checkbox" name="publication" value="Midwest times" checked> Midwest times</td>
+                        <td><input type="checkbox" name="publication" value="Modern News"> Modern News</td>
+                        <td><input type="checkbox" name="publication" value="Employment Today"> Employment Today</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" name="publication" value="Great Lakes Classifieds" checked> Great Lakes Classifieds</td>
+                        <td><input type="checkbox" name="publication" value="Middleton Daily"> Middleton Daily</td>
+                        <td><input type="checkbox" name="publication" value="Cashtown Daily News"> Cashtown Daily News</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                3) From to
+                <input type="date" name="fromDate" class="date">
+                to
+                <input type="date" name="toDate" class="date">.
+            </div>
+
+            <div class="row">
+                4) Enter a few keywords to describe the classified.<br><br>
+                <input type="text" name="keyword" class="keyword">
+            </div>
+
+            <div class="row">
+                5) Click one of the options below:<br><br>
+
+                <span class="btn">
+                    <img src="Search.gif" onclick="searchData()" alt="Search">
+
+                    <a href="help.html">
+                        <img src="Help.gif" alt="Help">
+                    </a>
+
+                    <img src="Cancel.gif" onclick="cancelData()" alt="Cancel">
+                </span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

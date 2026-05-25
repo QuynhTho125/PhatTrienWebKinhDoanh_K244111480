@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ex48</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Times New Roman", serif;
+            background: #eef7ff;
+        }
+        .box {
+            width: min(920px, 95vw);
+            min-height: 820px;
+            margin: 24px auto;
+            background: #99ccff;
+            border: 3px solid blue;
+            overflow-y: auto;
+            padding: 24px 32px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        }
+        img {
+            display: block;
+            width: 360px;
+            margin: 0 auto 35px;
+        }
+        h1,
+        p {
+            text-align: center;
+        }
+        form {
+            width: 760px;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+        .row {
+            margin: 10px 0;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+        input[type="text"],
+        select,
+        textarea {
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        input[type="text"],
+        select {
+            height: 28px;
+        }
+        .s {
+            width: 128px;
+        }
+        .m {
+            width: 160px;
+        }
+        .l {
+            width: 230px;
+        }
+        .xs {
+            width: 48px;
+        }
+        .zip {
+            width: 80px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #555;
+            margin: 18px 0;
+        }
+        .choice {
+            display: inline-flex;
+            gap: 45px;
+            flex-wrap: wrap;
+        }
+        textarea {
+            width: 385px;
+            height: 110px;
+        }
+        .btn {
+            text-align: center;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/Jackson.gif" alt="Jackson Electronics">
+
+        <h1>Registration Form</h1>
+        <p>Register your Jackson Electronics product here</p>
+
+        <form>
+            <div class="row">
+                <label>First Name:</label>
+                <input type="text" name="firstName" class="s">
+                Last Name:
+                <input type="text" name="lastName" class="s">
+            </div>
+
+            <div class="row">
+                <label>Address #1:</label>
+                <input type="text" name="address1" class="l">
+            </div>
+
+            <div class="row">
+                <label>Address #2:</label>
+                <input type="text" name="address2" class="l">
+            </div>
+
+            <div class="row">
+                <label>City:</label>
+                <input type="text" name="city" class="m">
+                State:
+                <input type="text" name="state" class="xs">
+                Zip:
+                <input type="text" name="zip" class="zip">
+            </div>
+
+            <div class="row">
+                <label>Country:</label>
+                <input type="text" name="country" value="United States" class="m">
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <label>Product:</label>
+                <select name="product" class="s">
+                    <option>ScanMaster</option>
+                    <option>PrintMaster</option>
+                    <option>CopyMaster</option>
+                    <option>FaxMaster</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Date Purchased:</label>
+                <input type="text" name="datePurchased" class="m">
+            </div>
+
+            <div class="row">
+                <label>Serial #:</label>
+                <input type="text" name="serial" class="m">
+            </div>
+
+            <div class="row">
+                <label>Used for:</label>
+                <span class="choice">
+                    <span>
+                        <input type="radio" name="usedFor" value="Home"> Home<br>
+                        <input type="radio" name="usedFor" value="Business" checked> Business<br>
+                        <input type="radio" name="usedFor" value="Government"> Government
+                    </span>
+
+                    <span>
+                        <input type="radio" name="usedFor" value="Educational Institution"> Educational Institution<br>
+                        <input type="radio" name="usedFor" value="Other"> Other
+                    </span>
+                </span>
+            </div>
+
+            <div class="row">
+                <label>System (check all that apply):</label>
+                <span class="choice">
+                    <span>
+                        <input type="checkbox" name="system" value="Windows"> Windows<br>
+                        <input type="checkbox" name="system" value="Macintosh"> Macintosh
+                    </span>
+
+                    <span>
+                        <input type="checkbox" name="system" value="UNIX"> UNIX<br>
+                        <input type="checkbox" name="system" value="Other"> Other
+                    </span>
+                </span>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <label>Comments?</label>
+                <textarea name="comments"></textarea>
+            </div>
+
+            <div class="btn">
+                <input type="button" value="Click to register" onclick="alert('Registration')">
+                <input type="reset" value="Click to cancel">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
