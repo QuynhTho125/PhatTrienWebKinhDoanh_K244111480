@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Result</title>
+</head>
+<body style="font-family: Arial; font-size: 20px;">
+
+<h2>Contact Information</h2>
+
+<p><b>Full name:</b> <span id="fullName"></span></p>
+<p><b>Email:</b> <span id="email"></span></p>
+<p><b>Send to:</b> <span id="sendTo"></span></p>
+<p><b>Title:</b> <span id="title"></span></p>
+<p><b>Content:</b></p>
+<p id="content"></p>
+
+<p>
+    <a href="ex52.html">Back to Contact Page</a>
+</p>
+
+<script>
+    var data = new URLSearchParams(window.location.search);
+
+    document.getElementById("fullName").innerHTML = data.get("fullName");
+    document.getElementById("email").innerHTML = data.get("email");
+    document.getElementById("sendTo").innerHTML = data.get("sendTo");
+    document.getElementById("title").innerHTML = data.get("title");
+    document.getElementById("content").innerHTML = data.get("content");
+</script>
+
+</body>
+</html>

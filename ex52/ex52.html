@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - GET</title>
+</head>
+<body>
+
+<form action="ex52_result.html" method="get"
+      style="width: 720px; margin: 30px auto; padding: 5px 10px 25px 10px; border: 2px solid #cccccc; font-family: Arial; font-size: 20px;">
+
+    <h2 style="font-family: 'Times New Roman'; margin-top: 0;">Contact the editorial office</h2>
+
+    <p>Full name</p>
+    <input type="text" name="fullName" style="width: 700px; height: 35px; font-size: 20px;">
+
+    <table width="700" style="margin-top: 25px;">
+        <tr>
+            <td width="350">Email</td>
+            <td width="350">Send to</td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="email" name="email" style="width: 330px; height: 35px; font-size: 20px;">
+            </td>
+
+            <td>
+                <select name="sendTo" style="width: 340px; height: 40px; font-size: 20px;">
+                    <option>Editorial board</option>
+                    <option>News Department</option>
+                    <option>Board of Perspectives</option>
+                    <option>World Board</option>
+                    <option>Business Department</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <p>Title</p>
+    <input type="text" name="title" style="width: 330px; height: 35px; font-size: 20px;">
+
+    <p>Content</p>
+    <textarea name="content" rows="10" style="width: 700px; font-size: 20px;"></textarea>
+
+    <p>
+        <input type="submit" value="Send"
+               style="background-color: #a71955; color: white; width: 120px; height: 48px; font-size: 20px; font-weight: bold; border: 0;">
+    </p>
+
+</form>
+
+</body>
+</html>
