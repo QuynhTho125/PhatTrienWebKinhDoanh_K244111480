@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" >
+        function giaiPhuongTrinh() 
+        {
+            a=document.getElementById("hsa").value
+            b=document.getElementById("hsb").value
+            a=Number(a)
+            b=Number(b)
+            kq=document.getElementById("ketqua")
+            if (a==0 && b==0)
+        {
+            kq.innerText="Infinite solutions"
+        }
+            else if (a==0 && b!=0)
+        {
+            kq.innerText="No solutions"
+        }
+            else
+        {
+            kq.innerText=(-b/a)
+        }
+        }
+
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2"> PT bac 1</td>
+        </tr>
+
+        <tr>
+            <td> He so a</td>
+            <td> <input type="text" id="hsa"> </td>
+        </tr>
+
+        <tr>
+            <td> He so b</td>
+            <td> <input type="text" id="hsb"> </td>
+        </tr>
+
+        <tr>
+            <td> Ket qua</td>
+            <td id="ketqua"> </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"> <input type="button" value="giai" onclick="giaiPhuongTrinh()"></td>
+            <td id="ketqua"> </td>
+        </tr>
+
+    </table>
+</body>
+</html>
