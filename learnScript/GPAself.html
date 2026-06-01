@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GPA Calculator</title>
+
+    <script>
+        function calGPA(){
+            var course = myForm.course.value;
+            var qt = myForm.input_qt.value;
+            var mid = myForm.input_mid.value;
+            var end = myForm.input_end.value;
+            var ad = myForm.input_ad.value;
+            var result="";
+
+            if(course=="1")
+            {
+                result = qt * 0.2 + mid * 0.3 + end * 0.5;
+            }
+            else if (course=="2")
+            {
+                result = qt * 0.15 + mid * 0.2 + end * 0.5 + advanced * 0.15;
+            }
+            else if (course=="3")
+            {
+                result = qt * 0.25 + mid * 0.25 + end * 0.5;
+            }
+            myForm.input_result.value=result;
+            }
+
+        function clearForm(){
+            myForm.input_qt.value="";
+            myForm.input_mid.value="";
+            myForm.input_end.value="";
+            myForm.input_ad.value="";
+            myForm.input_result.value="";
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+        <h3>Calculate GPA</h3>
+        <table>
+            <tr>
+                <td> Select course: </td>
+                <td>
+                    <select name="course" id="course">
+                        <option value="1"> Course 1</option>
+                        <option value="2"> Course 2</option>
+                        <option value="3"> Course 3</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Process </td>
+                <td> <input type="text name=input_qt" id="input_qt"> </td>
+            </tr>
+
+            <tr>
+                <td> Midterm </td>
+                <td> <input type="text name=input_mid" id="input_mid"> </td>
+            </tr>
+
+            <tr>
+                <td> Endterm </td>
+                <td> <input type="text name=input_end" id="input_end"> </td>
+            </tr>
+
+            <tr>
+                <td> Advanced </td>
+                <td> <input type="text name=input_ad" id="input_ad"> </td>
+            </tr>
+
+            <tr>
+                <td> Result: </td>
+                <td> <input type="text name=input_result" id="input_result" readonly> </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Cal GPA" onclick="calGPA()">
+                    <input type="button" value="Clear" onclick="clearForm()">
+                </td>           
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

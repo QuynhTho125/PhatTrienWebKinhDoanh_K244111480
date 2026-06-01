@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Toán học</title>
+
+    <script>
+        function solveEquation(){
+            var a = Number(myForm.input_a.value);
+            var b = Number(myForm.input_b.value);
+            var result = "";
+
+            if(a == 0)
+            {
+                if(b == 0) result = "Infinite Solution";
+                else result = "No solution";
+            }
+            else
+            {
+                result = (-b / a);
+            }
+
+            myForm.input_result.value = result;
+            td_result.innerHTML = "<font color='blue'>" + result + "</font>";
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+        <h3>Giải Phương trình Bậc 1</h3>
+
+        <table>
+            <tr>
+                <td>a:</td>
+                <td><input type="text" id="input_a" name="input_a"></td>
+            </tr>
+
+            <tr>
+                <td>b:</td>
+                <td><input type="text" id="input_b" name="input_b"></td>
+            </tr>
+
+            <tr>
+                <td>Result way 1:</td>
+                <td><input type="text" id="input_result" name="input_result" readonly></td>
+            </tr>
+
+            <tr>
+                <td>Result way 2:</td>
+                <td id="td_result"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Solve" onclick="solveEquation()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
