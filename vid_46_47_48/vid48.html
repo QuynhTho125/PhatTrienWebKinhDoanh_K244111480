@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="main.js"> </script>
+    <script type="text/javascript">
+        function xuly(a,b,pt)
+        {
+            kq=thucHienPhepToan(eval(a),eval(b),pt)
+            document.getElementById("ketqua").innerText=kq
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+            <td colspan="2"> PT bac 1</td>
+        </tr>
+
+        <tr>
+            <td> He so a</td>
+            <td> <input type="text" id="hsa"> </td>
+        </tr>
+
+        <tr>
+            <td> He so b</td>
+            <td> <input type="text" id="hsb"> </td>
+        </tr>
+
+        <tr>
+            <td> Ket qua</td>
+            <td id="ketqua"> </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"> 
+                <input type="button" value="Add" onclick="xuly(hsa.value,hsb.value, '+')">
+                <input type="button" value="Minus" onclick="xuly(hsa.value,hsb.value, '-')">
+                <input type="button" value="Multiply" onclick="xuly(hsa.value,hsb.value, '*')">
+                <input type="button" value="Divide" onclick="xuly(hsa.value,hsb.value, '/')">
+            </td>
+        </tr>
+        </table>
+    </form>
+</body>
+</html>
