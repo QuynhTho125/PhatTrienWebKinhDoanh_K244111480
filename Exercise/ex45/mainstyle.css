@@ -45,7 +45,7 @@ header h1 {
 
 aside {
     width: 190px;
-    background-image: url('ex45/images/back.jpg');
+    background-image: url('images/back.jpg');
     background-repeat: repeat;
     padding: 20px 15px;
     box-sizing: border-box;
