@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercise 57</title>
+
+    <script>
+        function calculateMouse() {
+            var qty = Number(myForm.qty1.value);
+            myForm.item1.value = 19.95 * qty;
+        }
+
+        function calculateKeyboard() {
+            var qty = Number(myForm.qty2.value);
+            myForm.item2.value = 29.95 * qty;
+        }
+
+        function calculateUSB() {
+            var qty = Number(myForm.qty3.value);
+            myForm.item3.value = 39.95 * qty;
+        }
+
+        function sumTotal() {
+            var item1 = Number(myForm.item1.value);
+            var item2 = Number(myForm.item2.value);
+            var item3 = Number(myForm.item3.value);
+
+            myForm.total.value = item1 + item2 + item3;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+        <h3>Exercise 57</h3>
+
+        <table border="1">
+            <tr>
+                <th>Part Number</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Item total</th>
+            </tr>
+
+            <tr>
+                <td>C112</td>
+                <td>Mouse</td>
+                <td>19.95$</td>
+                <td><input type="text" name="qty1" onkeyup="calculateMouse()"></td>
+                <td><input type="text" name="item1" readonly></td>
+            </tr>
+
+            <tr>
+                <td>B124</td>
+                <td>Keyboard US</td>
+                <td>29.95$</td>
+                <td><input type="text" name="qty2" onkeyup="calculateKeyboard()"></td>
+                <td><input type="text" name="item2" readonly></td>
+            </tr>
+
+            <tr>
+                <td>U125</td>
+                <td>USB KingMax</td>
+                <td>39.95$</td>
+                <td><input type="text" name="qty3" onkeyup="calculateUSB()"></td>
+                <td><input type="text" name="item3" readonly></td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Total:</td>
+                <td><input type="text" name="total" readonly></td>
+            </tr>
+
+            <tr>
+                <td colspan="5">
+                    <input type="button" value="Sum" onclick="sumTotal()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
