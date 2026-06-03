@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Math Function</title>
+
+    <script>
+        function calculate(type) {
+            var a = Number(myForm.input_a.value);
+            var b = Number(myForm.input_b.value);
+            var c = Number(myForm.input_c.value);
+            var result = "";
+
+            switch (type) 
+            {
+                case "max":
+                    result = Math.max(a, b, c);
+                    break;
+
+                case "min":
+                    result = Math.min(a, b, c);
+                    break;
+
+                case "sin":
+                    result = Math.sin(a);
+                    break;
+
+                case "cos":
+                    result = Math.cos(a);
+                    break;
+
+                case "pow":
+                    result = Math.pow(a, b);
+                    break;
+            }
+
+            myForm.input_result.value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+        <h3>Exercise 54: Math function</h3>
+
+        <table border="1">
+            <tr>
+                <td>a:</td>
+                <td><input type="text" name="input_a"></td>
+            </tr>
+
+            <tr>
+                <td>b:</td>
+                <td><input type="text" name="input_b"></td>
+            </tr>
+
+            <tr>
+                <td>c:</td>
+                <td><input type="text" name="input_c"></td>
+            </tr>
+
+            <tr>
+                <td>Result:</td>
+                <td><input type="text" name="input_result" readonly></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="MAX" onclick="calculate('max')">
+                    <input type="button" value="MIN" onclick="calculate('min')">
+                    <input type="button" value="sin(a)" onclick="calculate('sin')">
+                    <input type="button" value="Cos(a)" onclick="calculate('cos')">
+                    <input type="button" value="a^b" onclick="calculate('pow')">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
