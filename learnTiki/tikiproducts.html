@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Title</title>
+
+    <script src="js/mainjs.js">   </script>
+</head>
+<body>
+    
+    <table id="tblcategories"> <thead>
+            <tr>
+                <th> Category Image </th>
+                <th> Category Name </th>
+            </tr>
+        </thead>
+
+        <tbody id="bodycategory"> 
+            
+        </tbody>
+    </table>
+
+    <script>
+        var dataset_path="datasets/categories.xml"
+        var bodycategory=document.getElementById("bodycategory")
+        load_category_fromxml(dataset_path,bodycategory)
+    </script>
+
+</body>
+</html>
