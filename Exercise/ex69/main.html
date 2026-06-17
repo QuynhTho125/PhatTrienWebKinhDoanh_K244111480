@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Exercise 69 - Filter Employee by Title</title>
+    <style>
+        @import url(css/maincss.css);
+    </style>
+    <script src="js/mainjs.js"></script>
+</head>
+<body>
+
+    <div class="filter-container">
+        <label for="title-select">Title:</label>
+        <select id="title-select">
+            <option value="">-- Select Title --</option>
+            </select>
+    </div>
+    
+    <table id="tblemployees">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="bodyemployee">
+            </tbody>
+    </table>
+
+    <script>
+        var dataset_path = "datasets/employees.xml";
+        init_employee_filter(dataset_path);
+    </script>
+
+</body>
+</html>
