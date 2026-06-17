@@ -1,0 +1,25 @@
+/* Định dạng bảng cơ bản */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Tạo khoảng cách nhỏ với form bên dưới */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 6px;
+}
+
+/* Căn thẳng hàng các ô input theo chiều dọc */
+.form-group {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    width: 70px;
+}
+
+.form-group input {
+    flex: 1;
+}

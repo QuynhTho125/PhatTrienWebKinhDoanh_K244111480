@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Student XML DOM Parser</title>
+    <style>
+        table{width:100%;border-collapse:collapse;margin-bottom:20px}
+        th,td{border:1px solid #ccc;padding:6px}
+        .form-group{display:flex;margin-bottom:5px}
+        .form-group label{width:70px}
+        .form-group input{flex:1}
+    </style>
+    <script src="js/students.js"></script>
+    <script src="js/mainjs.js"></script>
+</head>
+<body>
+
+    <h1>Quản Lý Thông Tin Sinh Viên</h1>
+    
+    <div class="container">
+        
+        <div class="left-panel">
+            <table id="tblstudents">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Birthday</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody id="bodystudent">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="right-panel">
+            <h3>Thông Tin Chi Tiết</h3>
+            <div class="form-group">
+                <label>ID:</label>
+                <input type="text" id="info-id" readonly>
+            </div>
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" id="info-name" readonly>
+            </div>
+            <div class="form-group">
+                <label>Birthday:</label>
+                <input type="text" id="info-birthday" readonly>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="text" id="info-gender" readonly>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        load_students(students, document.getElementById("bodystudent"));
+    </script>
+
+</body>
+</html>
